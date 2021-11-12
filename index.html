@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none;
         }
         
         .container {
@@ -110,6 +111,12 @@
         h2 {
             margin: 5px 0px;
         }
+        
+        @media screen and (max-width:700px) {
+            .card {
+                height: 355px;
+            }
+        }
     </style>
 </head>
 
@@ -145,12 +152,12 @@
 <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script>
     /*  var a = document.getElementsByClassName("card");
-                                    Array.from(a).map(function(e) {
-                                        VanillaTilt.init(e, {
-                                            max: 25,
-                                            speed: 400
-                                        });
-                                    }) */
+                                            Array.from(a).map(function(e) {
+                                                VanillaTilt.init(e, {
+                                                    max: 25,
+                                                    speed: 400
+                                                });
+                                            }) */
     VanillaTilt.init(document.querySelectorAll(".card"), {
         max: 25,
         speed: 400
